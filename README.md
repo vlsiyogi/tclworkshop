@@ -35,7 +35,7 @@ Generated file should look like below: <br>
 4. provide useful information to user by adding the help for using the command `./yogisynth <csv_filepath>` </br>
    ![image](https://github.com/user-attachments/assets/31aa6272-68fe-4efd-a6ce-600136d9e514)
 
-5. if user provides one argument and it is not '-help' and the file  or path exists, pass tat to the tcl script yogisynth.tcl </br>
+5. if user provides one argument and it is not '-help' and the file  or path exists, pass that to the tcl script yogisynth.tcl </br>
    ![image](https://github.com/user-attachments/assets/d99692a2-b8f2-424b-87a4-36fb90e1b374)
 
 
