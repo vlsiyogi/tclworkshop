@@ -46,7 +46,7 @@ Target is to read csv files containing the various file /folder paths and genera
  3. convert the csv containt table to the sdc format acceptable by syntheis and PnR tool
  4. Read all .v files from the verilog netlist folder and arange it in Yosys understandable format
  5. Create a syntheis script for converting rtl netlist to gatelvel netlist using yosys tool ( Format 2)
-   ![image](https://github.com/user-attachments/assets/662402a9-3ae9-4773-86b5-641fd349a276)
+   ![image](https://github.com/user-attachments/assets/1742a785-77c7-44e0-8bed-86b010dc86a4)
 
 Lets look into the details of each step 
 
