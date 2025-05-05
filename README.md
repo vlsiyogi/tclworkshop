@@ -73,7 +73,7 @@ Target is to read csv files containing the various file /folder paths and genera
  
  4. use while loop to acess  array elements, read row by row and extact first column cell containts and remove the spaces between the strings to make them used as valid variable names. </br>
    ![image](https://github.com/user-attachments/assets/d84d01c0-6773-45a1-889d-2d51446aa32a)
-    use map function ( string replace command) to remove spaces from the value of the string in the first row ( row 0)  of csv file / matrix /array</br>
+    </br> use map function ( string replace command) to remove spaces from the value of the string in the first row ( row 0)  of csv file / matrix /array </br>
           ![image](https://github.com/user-attachments/assets/bb9c6bbb-e603-47a5-baac-58eb41bc84b7)
     'varname' can be assigned with the value of the 2D 'array' element located at '(col# ,row#)' by using `set varname $array(col#, row#)`</br>
     above commands generate the varible name automatically from the string read from the csv files first column ( column0) </br> and assigns the value of the  varibale to the string read from the column 1 of the csv file.
