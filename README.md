@@ -39,8 +39,14 @@ Generated file should look like below: <br>
    ![image](https://github.com/user-attachments/assets/d99692a2-b8f2-424b-87a4-36fb90e1b374)
 
 # DAY 2
-## Aotogeneration of Variable and processing Constraints from CSV 
-### 1.
+## Aotogeneration of Variable and processing Constraints from CSV to generate SDC ( format 1)
+Target is to read csv files containing the various file /folder paths and generate the variables and assign the path values to those variable
+### 1. Create the variables using tcl scrip by reading the CSV file cell containts ( first columns)
+### 2. Check if the files / folder paths provided by user in a csv file ( second column)  does exists 
+### 3. convert the csv containt table to the sdc format acceptable by syntheis and PnR tool
+### 4. Read all .v files from the verilog netlist folder and arange it in Yosys understandable format
+### 5. Create a syntheis script for converting rtl netlist to gatelvel netlist using yosys tool ( Format 2)
+
 
 
 
