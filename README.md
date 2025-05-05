@@ -51,7 +51,13 @@ Target is to read csv files containing the various file /folder paths and genera
 Lets look into the details of each step 
 
 ### 1. Create the variables using tcl scrip by reading the CSV file cell containts ( first columns)
-
+ shell script will pass the command argument to the tcl script using `tclsh yogisynth.tcl $argv[1]` where $argv[1] is nothing but a path of the csv file entered in the shell command
+ for automatically generating the variables by reading the csv file following steps are involved
+ 1. pass csv file path to tcl script
+ 2. read csv file containts to a matrix using tcl command 
+ 3. conert the matrrix to the indexed array
+ 4. use while loop to acess  array row by row and extact first column cell containts and remove the spaces between the strings to make them used as valid variable names
+ 5. 
 ### 2. Check if the files / folder paths provided by user in a csv file ( second column)  does exists 
 ### 3. convert the csv containt table to the sdc format acceptable by syntheis and PnR tool
 ### 4. Read all .v files from the verilog netlist folder and arange it in Yosys understandable format
