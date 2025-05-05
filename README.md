@@ -17,11 +17,11 @@ File contents :</br>
 ![image](https://github.com/user-attachments/assets/e5af5fc0-d61c-4416-b1bd-86c54cdb302d)
 
 ### 2. Generate "yogisynth" command using bash / tcsh script 
-genrate a command which will take the csv file path from user, check if path is valid and file exists and then passes that file to the tcl script
-script also provides help  about command by using `./yogisynth -help`
+genrate a command which will take the csv file path from user, check if path is valid, file exists and then passes that file to the tcl script command also provides help  about command by using `./yogisynth -help`
 </br>
 
-Generate a file called yogisynth using linux terminal using `gedit yogisynth` or `gvim yogisynth` and it shall have below segments of coads to  carryout various desired functionality
+Generate a file called yogisynth using linux terminal  `gedit yogisynth` or `gvim yogisynth` and it shall have below segments of coads to  carryout various desired functionality explained below.
+
 Generated file should look like below: <br>
 1. First line tells the linux operating system that it is a shell script, other part of the code just informs user about what the command or this shell script does
    ![image](https://github.com/user-attachments/assets/27a401de-0740-4d38-9c09-841eb7f29cac)
@@ -56,8 +56,8 @@ Lets look into the details of each step
  1. pass csv file path to tcl script
  2. read csv file containts to a matrix using tcl command 
  3. conert the matrrix to the indexed array
- 4. use while loop to acess  array row by row and extact first column cell containts and remove the spaces between the strings to make them used as valid variable names
- 5. 
+ 4. use while loop to acess  array elements, read row by row and extact first column cell containts and remove the spaces between the strings to make them used as valid variable names.
+ 5. use  `set varname $array(col#, row#)` format  `varname` can be assigned with the value of the `array` element located at `(col# ,row#)`
 ### 2. Check if the files / folder paths provided by user in a csv file ( second column)  does exists 
 ### 3. convert the csv containt table to the sdc format acceptable by syntheis and PnR tool
 ### 4. Read all .v files from the verilog netlist folder and arange it in Yosys understandable format
