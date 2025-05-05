@@ -38,7 +38,9 @@ Generated file should look like below: <br>
 5. if user provides one argument and it is not '-help' and the file  or path exists, pass that to the tcl script yogisynth.tcl </br>
    ![image](https://github.com/user-attachments/assets/d99692a2-b8f2-424b-87a4-36fb90e1b374)
 
-
+# DAY 2
+## Aotogeneration of Variable and processing Constraints from CSV 
+### 1.
 
 
 
