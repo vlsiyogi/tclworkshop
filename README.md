@@ -69,7 +69,7 @@ Target is to read csv files containing the various file /folder paths and genera
 
  3. conert the matrrix to the indexed array by linking matrix m to the array my_arr</br>
     ![image](https://github.com/user-attachments/assets/910d8eda-21ca-43fa-8427-cfb2f3e899f1)
-    assign varible 'columns' and 'rows' with number of columns and rows present in the 'my_array'
+    </br> assign varible 'columns' and 'rows' with number of columns and rows present in the 'my_array'
  
  4. use while loop to acess  array elements, read row by row and extact first column cell containts and remove the spaces between the strings to make them used as valid variable names. </br>
    ![image](https://github.com/user-attachments/assets/d84d01c0-6773-45a1-889d-2d51446aa32a)
