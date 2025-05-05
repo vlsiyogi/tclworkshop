@@ -81,7 +81,15 @@ Target is to read csv files containing the various file /folder paths and genera
     
 
 ### 2. Check if the files / folder paths provided by user in a csv file ( second column)  does exists 
+   Script checks for the correctness of the file paths </br>
+   ![image](https://github.com/user-attachments/assets/b6b79f88-36b4-47af-8aed-9843e3ef8c8e)
+   </br> check that file exists or not the below function returns boolean output ( yes / no) , exit if files do not exist.
+   </br> command to check if file exists : `file exists <file_path>`
+   </br> check if the directory paths are pointing to the directories using `file isdirectory <diectory_path>`
+   </br> if output directory does not exists crete it using `file mkdir <directory_path>`
+      
 ### 3. convert the csv containt table to the sdc format acceptable by syntheis and PnR tool
+
 ### 4. Read all .v files from the verilog netlist folder and arange it in Yosys understandable format
 ### 5. Create a syntheis script for converting rtl netlist to gatelvel netlist using yosys tool ( Format 2)
 
