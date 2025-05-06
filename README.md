@@ -147,7 +147,7 @@ Lets see How it works </br>
    e. similar to  step a &b which was carried on clock ports the input port start indices are assigned with its column number, part of code perfroming this is shown below </br>
         ![image](https://github.com/user-attachments/assets/d4fbd9d3-e4da-45d8-9b73-545aac8db195)
 
-   f. for input and output constraints ,one needs to identify that which port is a bus , and then sdc constraints * postfix ( wildcard) needs to be used to apply constraints to all bits of the bus.
+   f. for input and output constraints ,one needs to identify that which port is a bus , and then in sdc constraints * postfix ( wildcard) needs to be used to apply constraints to all bits of the bus.
       
 
 
