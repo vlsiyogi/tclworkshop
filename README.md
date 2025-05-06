@@ -126,12 +126,32 @@ The csv file is input and the sdc constraints on the bottom is the output </br>
 ![image](https://github.com/user-attachments/assets/a5082b7e-a004-45e1-a6b9-2485dab9bcee)
 
 A Rectangular area is selected for the search in a spreadsheet, the boundries of these rectangle are defined by values of various variables like 'number of columns', 'clock_start', 'input_ports_start 
-
-![image](https://github.com/user-attachments/assets/80bfa9d3-df43-40a0-b644-8d8958c9f9c5)
+![image](https://github.com/user-attachments/assets/5b23f42e-d7a2-4c55-892c-969337d16ad0)
 
 The part of the code which does this is shown below </br>
-![image](https://github.com/user-attachments/assets/dadaeabf-57d3-4c97-a287-d343719a6d38)
+![image](https://github.com/user-attachments/assets/c4918d29-a25d-49c9-8c8a-24648bd4dd29)
+
 Lets see How it works </br>
+   a.   Text 'early_rise is searched in a rectangle specified by the digonal co ordinates ( col, row) using the following , this command provides list of the co ordinates {c1,r1} {c2,r2} ... {cn,Rn} at which  the search text 'early_rise_delay' matches to the cell containts </br>
+      `[constraints search rect $clock_start_column $clock_start [expr {$number_of_columns-1}] [expr {$input_ports_start-1}]  early_rise_delay]`
+
+   b. out of this list index of the first matched cell is extracted using lindex command which will provide c1 R1 as a output,another  lindex operation will provide c1 as the output and then variable early_clockrise_delay_start is assigned with thei value c1 ( 3 in our case) which is the coumn             number where the early delay entry starts </br>
+
+   c. This  process is repeated to find out the start columns for the other variables
+
+   d. new sdc file is generated and sdc constraints for clock are written to the file using folloing code , $Designname.sdc file is opened in write mode and a variable sdc_file is assigned with the file handler
+      various sdc clock constraints like create_clock , set clock_transition, set clock_delay etc are appended to the file with appropriate sdc constraint syntax, using puts  -nonewline $sdcfile "sdc_constraint"
+      get cell command is used on the constraints matrix to retive cell values, this is repeated till clock constraints are generated for all clock ports 
+      ![image](https://github.com/user-attachments/assets/63fdb306-3297-4734-a264-6e72f50816fa)
+
+   e. similar to  step a &b which was carried on clock ports the input port start indices are assigned with its column number, part of code perfroming this is shown below </br>
+        ![image](https://github.com/user-attachments/assets/d4fbd9d3-e4da-45d8-9b73-545aac8db195)
+
+   f. for input and output constraints ,one needs to identify that which port is a bus , and then sdc constraints * postfix ( wildcard) needs to be used to apply constraints to all bits of the bus.
+      
+
+
+ 
 
 
 
