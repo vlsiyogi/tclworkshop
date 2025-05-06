@@ -97,7 +97,24 @@ Here is this part of the script which auto generates the variable names and assi
    </br> if output directory does not exists crete it using  `file mkdir <directory_path>`</br>
       
 ### 3. convert the csv containt table to the sdc format acceptable by syntheis and PnR tool
+   target of this task is to convert the constraints csv file to the standard sdc file which is understood by the synthesis tool
+   the csv file has various sections for he constraints like clock, Input, and output, with various parmaters for it defined like early delay, late_delay, load, rise fall time 
+   Each input, output and clock constraints need to be handlled differently. The csv file of the constraints looks like below</br>
+   ![image](https://github.com/user-attachments/assets/d7f9f751-be26-4f78-92b6-1afc7875e61d)
 
+   a. Reading csv file to matrix , set variables for the number of rows and columns in the matrix
+   ![image](https://github.com/user-attachments/assets/6f2a8038-6a41-4ead-a08d-477af924be30)
+   
+   b. identify the ( col, row) address of the various key words like CLOCKS, fequency and duty cycle
+   search all provides the ( columne , row) address / index of the cells which contains text CLOCKS
+   the 'lindex' provid the zeroth element of the list, which is row index provided by search command
+   ![image](https://github.com/user-attachments/assets/8b786c23-8002-4763-9d7d-07e5e41dd286)
+
+   c. simillar search operation is done for Inputs and Outputs, this will provide the start address /index / row number 
+   for the Input and Outputs in the variables 
+   ![image](https://github.com/user-attachments/assets/78d12882-833c-466c-9311-ab68eec00ed0)
+
+   
 ### 4. Read all .v files from the verilog netlist folder and arange it in Yosys understandable format
 ### 5. Create a syntheis script for converting rtl netlist to gatelvel netlist using yosys tool ( Format 2)
 
